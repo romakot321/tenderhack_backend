@@ -1,0 +1,128 @@
+{
+    "customer": {
+        "name": "Департамент здравоохранения города Москвы",
+        "id": 1139879
+    },
+    "createdByCustomer": {
+        "name": "Департамент здравоохранения города Москвы",
+        "id": 1139879
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "28.10.2024 14:13:17",
+    "initialDuration": 24.0,
+    "endDate": "29.10.2024 14:13:17",
+    "startCost": 1364.00000,
+    "nextCost": 1357.18000,
+    "lastBetSupplier": null,
+    "lastBetCost": null,
+    "lastBetId": null,
+    "lastBet": null,
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 682.00000,
+            "okeiName": "боб",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Плиты, листы, пленка и полосы (ленты) полимерные, неармированные или не комбинированные с другими материалами",
+            "productionDirectoryName": "Лента обвязочная упаковочная",
+            "oksm": null,
+            "name": null,
+            "id": 22130028
+        }
+    ],
+    "bets": [],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 0,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "28.10.2024 16:18:34",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "п. 4 ч. 1 ст. 93 Закупка объемом до 600 тысяч рублей",
+    "items": [
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 682.00000,
+            "okeiName": "боб",
+            "createdOfferId": null,
+            "skuId": 1239747,
+            "imageId": 2107701918,
+            "defaultImageId": null,
+            "okpdName": "Плиты, листы, пленка и полосы (ленты) полимерные, неармированные или не комбинированные с другими материалами",
+            "productionDirectoryName": "Лента обвязочная упаковочная",
+            "oksm": null,
+            "name": "Шпагат джутовый 1,5 ктекс, 1 кг/боб.",
+            "id": 22130028
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 10,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, Город Москва, площадь Журавлёва, дом 12",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 1364.0000000,
+                    "costPerUnit": 682.00000,
+                    "quantity": 2.00,
+                    "name": "Шпагат джутовый 1,5 ктекс, 1 кг/боб.",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6204964
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "техническое задание шпагат.docx",
+            "id": 232168690
+        },
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232168697
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23785171",
+    "isElectronicContractExecutionRequired": true,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmQ/dA8=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "Шпагат джутовый 1,5 ктекс, 1 кг/боб.",
+    "id": 9862366
+}

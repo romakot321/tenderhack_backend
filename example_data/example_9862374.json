@@ -1,0 +1,128 @@
+{
+    "customer": {
+        "name": "Государственное бюджетное учреждение здравоохранения города Москвы «Городская поликлиника № 67 Департамента здравоохранения города Москвы»",
+        "id": 14766688
+    },
+    "createdByCustomer": {
+        "name": "Государственное бюджетное учреждение здравоохранения города Москвы «Городская поликлиника № 67 Департамента здравоохранения города Москвы»",
+        "id": 14766688
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "28.10.2024 14:22:08",
+    "initialDuration": 24.0,
+    "endDate": "29.10.2024 14:22:08",
+    "startCost": 43200.00000,
+    "nextCost": 42984.00000,
+    "lastBetSupplier": null,
+    "lastBetCost": null,
+    "lastBetId": null,
+    "lastBet": null,
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 12.00000,
+            "costPerUnit": 3600.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Устройства ввода/вывода данных прочие",
+            "productionDirectoryName": "Оборудование для работы со штрих-кодами, радиометками и этикетками",
+            "oksm": null,
+            "name": null,
+            "id": 22130049
+        }
+    ],
+    "bets": [],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 0,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "28.10.2024 16:26:01",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "п. 4 ч. 1 ст. 93 Закупка объемом до 600 тысяч рублей",
+    "items": [
+        {
+            "currentValue": 12.00000,
+            "costPerUnit": 3600.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 21308104,
+            "imageId": 2107763961,
+            "defaultImageId": null,
+            "okpdName": "Устройства ввода/вывода данных прочие",
+            "productionDirectoryName": "Оборудование для работы со штрих-кодами, радиометками и этикетками",
+            "oksm": null,
+            "name": "Сканер штрих-кода 2D АТОЛ SB2108 Plus USB",
+            "id": 22130049
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 15,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, Москва, Автозаводская улица, 23 ст177",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 43200.0000000,
+                    "costPerUnit": 3600.00000,
+                    "quantity": 12.00,
+                    "name": "Сканер штрих-кода 2D АТОЛ SB2108 Plus USB",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6204985
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "Техническое задание сканер.doc",
+            "id": 232170708
+        },
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232170711
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23785453",
+    "isElectronicContractExecutionRequired": true,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmQ/nuY=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "Сканер штрих-кода 2D АТОЛ SB2108 Plus USB",
+    "id": 9862374
+}

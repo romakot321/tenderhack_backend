@@ -1,0 +1,165 @@
+{
+    "customer": {
+        "name": "Акционерное общество «Москоллектор»",
+        "id": 14767984
+    },
+    "createdByCustomer": {
+        "name": "Акционерное общество «Москоллектор»",
+        "id": 14767984
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "31.10.2024 09:59:13",
+    "initialDuration": 6.0,
+    "endDate": "31.10.2024 15:59:13",
+    "startCost": 1349104.00000,
+    "nextCost": 1342358.48000,
+    "lastBetSupplier": null,
+    "lastBetCost": null,
+    "lastBetId": null,
+    "lastBet": null,
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 39.00000,
+            "costPerUnit": 12500.00000,
+            "okeiName": "компл",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Одежда производственная и профессиональная прочая, не включенная в другие группировки",
+            "productionDirectoryName": "Одежда специальная для защиты от искр и брызг расплавленного металла",
+            "oksm": null,
+            "name": null,
+            "id": 22138401
+        },
+        {
+            "currentValue": 94.00000,
+            "costPerUnit": 9166.00000,
+            "okeiName": "компл",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Одежда производственная и профессиональная прочая, не включенная в другие группировки",
+            "productionDirectoryName": "Одежда специальная для защиты от искр и брызг расплавленного металла",
+            "oksm": null,
+            "name": null,
+            "id": 22138402
+        }
+    ],
+    "bets": [],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 0,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "31.10.2024 11:22:31",
+    "federalLawName": "223-ФЗ",
+    "conclusionReasonName": null,
+    "items": [
+        {
+            "currentValue": 39.00000,
+            "costPerUnit": 12500.00000,
+            "okeiName": "компл",
+            "createdOfferId": null,
+            "skuId": 38306130,
+            "imageId": 232380584,
+            "defaultImageId": null,
+            "okpdName": "Одежда производственная и профессиональная прочая, не включенная в другие группировки",
+            "productionDirectoryName": "Одежда специальная для защиты от искр и брызг расплавленного металла",
+            "oksm": null,
+            "name": "Костюм сварщика зимний \"СТЕЛ\", синий деним, размер 58/188",
+            "id": 22138401
+        },
+        {
+            "currentValue": 94.00000,
+            "costPerUnit": 9166.00000,
+            "okeiName": "компл",
+            "createdOfferId": null,
+            "skuId": 34775156,
+            "imageId": 2096328214,
+            "defaultImageId": null,
+            "okpdName": "Одежда производственная и профессиональная прочая, не включенная в другие группировки",
+            "productionDirectoryName": "Одежда специальная для защиты от искр и брызг расплавленного металла",
+            "oksm": null,
+            "name": "Костюм  для сварщика",
+            "id": 22138402
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": null,
+            "periodDaysTo": null,
+            "periodDateFrom": "18.11.2024 03:00:00",
+            "periodDateTo": "15.01.2025 03:00:00",
+            "deliveryPlace": "г г Москва, г. Москва",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 487500.0000000,
+                    "costPerUnit": 12500.00000,
+                    "quantity": 39.00,
+                    "name": "Костюм сварщика зимний \"СТЕЛ\", синий деним, размер 58/188",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 861604.0000000,
+                    "costPerUnit": 9166.00000,
+                    "quantity": 94.00,
+                    "name": "Костюм  для сварщика",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6215243
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "Проект договора.pdf",
+            "id": 232492123
+        },
+        {
+            "companyId": null,
+            "name": "ТЗ сварщики.docx",
+            "id": 232492125
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23849066",
+    "isElectronicContractExecutionRequired": false,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmWafHE=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "ОДЕЖДА СПЕЦИАЛЬНАЯ ДЛЯ ЗАЩИТЫ ОТ ИСКР И БРЫЗГ РАСПЛАВЛЕННОГО МЕТАЛЛА",
+    "id": 9864708
+}

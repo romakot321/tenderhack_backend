@@ -1,0 +1,170 @@
+{
+    "customer": {
+        "name": "Государственное бюджетное профессиональное образовательное учреждение города Москвы «Московский техникум креативных индустрий им. Л.Б. Красина»",
+        "id": 14764594
+    },
+    "createdByCustomer": {
+        "name": "Государственное бюджетное профессиональное образовательное учреждение города Москвы «Московский техникум креативных индустрий им. Л.Б. Красина»",
+        "id": 14764594
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "31.10.2024 10:52:27",
+    "initialDuration": 6.0,
+    "endDate": "31.10.2024 16:52:27",
+    "startCost": 1269135.00000,
+    "nextCost": 1262788.80000,
+    "lastBetSupplier": null,
+    "lastBetCost": null,
+    "lastBetId": null,
+    "lastBet": null,
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 105.00000,
+            "costPerUnit": 4950.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Столы ученические деревянные для учебных заведений, включая школьные парты",
+            "productionDirectoryName": "Столы ученические",
+            "oksm": null,
+            "name": null,
+            "id": 22138975
+        },
+        {
+            "currentValue": 105.00000,
+            "costPerUnit": 7137.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Мебель для сидения, преимущественно с металлическим каркасом",
+            "productionDirectoryName": "Стулья ученические",
+            "oksm": null,
+            "name": null,
+            "id": 22138976
+        }
+    ],
+    "bets": [],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 0,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "31.10.2024 12:37:48",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "ч. 2 ст. 15 46-ФЗ (котировочная сессия)",
+    "items": [
+        {
+            "currentValue": 105.00000,
+            "costPerUnit": 4950.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38298680,
+            "imageId": 231878130,
+            "defaultImageId": null,
+            "okpdName": "Столы ученические деревянные для учебных заведений, включая школьные парты",
+            "productionDirectoryName": "Столы ученические",
+            "oksm": null,
+            "name": "Стол ученический одноместный Мебельно-производственная компания \"Ястреб-АС\" Техно, 500х680 мм, ростовая группа 7 серый/оранжевый",
+            "id": 22138975
+        },
+        {
+            "currentValue": 105.00000,
+            "costPerUnit": 7137.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 37983657,
+            "imageId": 2133129054,
+            "defaultImageId": null,
+            "okpdName": "Мебель для сидения, преимущественно с металлическим каркасом",
+            "productionDirectoryName": "Стулья ученические",
+            "oksm": null,
+            "name": "Стул ученический лабораторный «ЯСТРЕБ-АС» поворотный регулируемый с сиденьем из цельнолитого пластика, цвет оранжевый 430*460*450 мм",
+            "id": 22138976
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 10,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, 115280, город Москва, ул. Велозаводская, д.8",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 519750.0000000,
+                    "costPerUnit": 4950.00000,
+                    "quantity": 105.00,
+                    "name": "Стол ученический одноместный Мебельно-производственная компания \"Ястреб-АС\" Техно, 500х680 мм, ростовая группа 7 серый/оранжевый",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 749385.0000000,
+                    "costPerUnit": 7137.00000,
+                    "quantity": 105.00,
+                    "name": "Стул ученический лабораторный «ЯСТРЕБ-АС» поворотный регулируемый с сиденьем из цельнолитого пластика, цвет оранжевый 430*460*450 мм",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6215902
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232507116
+        },
+        {
+            "companyId": null,
+            "name": "Техническое_задание_Мебель (2).docx",
+            "id": 232507119
+        },
+        {
+            "companyId": null,
+            "name": "Расчет НМЦК (21).xlsx",
+            "id": 232507129
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23849930",
+    "isElectronicContractExecutionRequired": true,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmWh8Dw=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "МЕБЕЛЬ УЧЕНИЧЕСКАЯ",
+    "id": 9864863
+}

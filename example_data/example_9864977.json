@@ -1,0 +1,161 @@
+{
+    "customer": {
+        "name": "Уполномоченный по правам человека в городе Москве и его аппарат",
+        "id": 1140312
+    },
+    "createdByCustomer": {
+        "name": "Уполномоченный по правам человека в городе Москве и его аппарат",
+        "id": 1140312
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "31.10.2024 11:33:38",
+    "initialDuration": 3.0,
+    "endDate": "31.10.2024 14:33:38",
+    "startCost": 22750.00000,
+    "nextCost": 22521.80000,
+    "lastBetSupplier": {
+        "name": "Другой участник",
+        "id": null
+    },
+    "lastBetCost": 22635.90000,
+    "lastBetId": 151545414,
+    "lastBet": {
+        "num": 1,
+        "cost": 22635.90000,
+        "serverTime": "31.10.2024 12:54:11",
+        "isAutoBet": false,
+        "auctionId": 9864977,
+        "supplierId": 1980830,
+        "createUserId": 1409841,
+        "lastManualServerTime": null,
+        "supplier": {
+            "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАРДА\"",
+            "id": 1980830
+        },
+        "id": 151545414
+    },
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 70.00000,
+            "costPerUnit": 325.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Воды природные питьевые упакованные, в том числе газированные, не содержащие сахара, подсластителей, ароматизаторов и других пищевых веществ",
+            "productionDirectoryName": "Вода питьевая",
+            "oksm": null,
+            "name": null,
+            "id": 22139405
+        }
+    ],
+    "bets": [
+        {
+            "num": 1,
+            "cost": 22635.90000,
+            "serverTime": "31.10.2024 12:54:11",
+            "isAutoBet": false,
+            "auctionId": 9864977,
+            "supplierId": 1980830,
+            "createUserId": 1409841,
+            "lastManualServerTime": null,
+            "supplier": {
+                "name": "Другой участник",
+                "id": null
+            },
+            "id": 151545414
+        }
+    ],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 1,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "31.10.2024 14:26:54",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "п. 4 ч. 1 ст. 93 Закупка объемом до 600 тысяч рублей",
+    "items": [
+        {
+            "currentValue": 70.00000,
+            "costPerUnit": 325.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 36255197,
+            "imageId": 2133721822,
+            "defaultImageId": null,
+            "okpdName": "Воды природные питьевые упакованные, в том числе газированные, не содержащие сахара, подсластителей, ароматизаторов и других пищевых веществ",
+            "productionDirectoryName": "Вода питьевая",
+            "oksm": null,
+            "name": "Вода питьевая Аква Лига ЛЮКС Фарватер 18,9л ",
+            "id": 22139405
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": null,
+            "periodDaysTo": null,
+            "periodDateFrom": "01.11.2024 03:00:00",
+            "periodDateTo": "28.12.2024 03:00:00",
+            "deliveryPlace": "г г Москва, 127006, г. Москва, Успенский пер., д. 14, стр.1",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 22750.0000000,
+                    "costPerUnit": 325.00000,
+                    "quantity": 70.00,
+                    "name": "Вода питьевая Аква Лига ЛЮКС Фарватер 18,9л ",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6216414
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "ТЗ вода.31.10.docx",
+            "id": 232520279
+        },
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232520280
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23855484",
+    "isElectronicContractExecutionRequired": false,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmlsxvA=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "Вода питьевая Аква Лига ЛЮКС Фарватер 18,9л ",
+    "id": 9864977
+}

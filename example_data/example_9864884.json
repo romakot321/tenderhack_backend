@@ -1,0 +1,198 @@
+{
+    "customer": {
+        "name": "Общество с ограниченной ответственностью «Научно-производственное предприятие БИОТУМ»",
+        "id": 14782135
+    },
+    "createdByCustomer": {
+        "name": "Общество с ограниченной ответственностью «Научно-производственное предприятие БИОТУМ»",
+        "id": 14782135
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "31.10.2024 10:59:18",
+    "initialDuration": 3.0,
+    "endDate": "31.10.2024 13:59:18",
+    "startCost": 18000.00000,
+    "nextCost": 17820.00000,
+    "lastBetSupplier": {
+        "name": "Другой участник",
+        "id": null
+    },
+    "lastBetCost": 17910.00000,
+    "lastBetId": 151541084,
+    "lastBet": {
+        "num": 1,
+        "cost": 17910.00000,
+        "serverTime": "31.10.2024 11:08:33",
+        "isAutoBet": false,
+        "auctionId": 9864884,
+        "supplierId": 28465382,
+        "createUserId": 20253199,
+        "lastManualServerTime": null,
+        "supplier": {
+            "name": "ИП Хвещенко Филипп Игоревич",
+            "id": 28465382
+        },
+        "id": 151541084
+    },
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 6000.00000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Обувь специальная кожаная для защиты от механических воздействий",
+            "productionDirectoryName": "Обувь специальная кожаная для защиты от механических воздействий",
+            "oksm": null,
+            "name": null,
+            "id": 22139072
+        },
+        {
+            "currentValue": 1.00000,
+            "costPerUnit": 6000.00000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Обувь зимняя с верхом из кожи",
+            "productionDirectoryName": "Обувь зимняя с верхом из кожи",
+            "oksm": null,
+            "name": null,
+            "id": 22139073
+        }
+    ],
+    "bets": [
+        {
+            "num": 1,
+            "cost": 17910.00000,
+            "serverTime": "31.10.2024 11:08:33",
+            "isAutoBet": false,
+            "auctionId": 9864884,
+            "supplierId": 28465382,
+            "createUserId": 20253199,
+            "lastManualServerTime": null,
+            "supplier": {
+                "name": "Другой участник",
+                "id": null
+            },
+            "id": 151541084
+        }
+    ],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 1,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "31.10.2024 11:55:48",
+    "federalLawName": "223-ФЗ",
+    "conclusionReasonName": null,
+    "items": [
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 6000.00000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": 36675305,
+            "imageId": 2142606318,
+            "defaultImageId": null,
+            "okpdName": "Обувь специальная кожаная для защиты от механических воздействий",
+            "productionDirectoryName": "Обувь специальная кожаная для защиты от механических воздействий",
+            "oksm": null,
+            "name": "Полуботинки летние Мистраль Ultra ПУ-ТПУ натуральная кожа черные размер 42",
+            "id": 22139072
+        },
+        {
+            "currentValue": 1.00000,
+            "costPerUnit": 6000.00000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": 37415899,
+            "imageId": 201648719,
+            "defaultImageId": null,
+            "okpdName": "Обувь зимняя с верхом из кожи",
+            "productionDirectoryName": "Обувь зимняя с верхом из кожи",
+            "oksm": null,
+            "name": "Ботинки зимние   мужские МИСТРАЛЬ ULTRA    размер 42 , коричневый/желтый.",
+            "id": 22139073
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 7,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, Российская Федерация, 600901, г. Владимир, мкр. Юрьевец, ул. Ноябрьская, д. 144",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 12000.0000000,
+                    "costPerUnit": 6000.00000,
+                    "quantity": 2.00,
+                    "name": "Полуботинки летние Мистраль Ultra ПУ-ТПУ натуральная кожа черные размер 42",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 6000.0000000,
+                    "costPerUnit": 6000.00000,
+                    "quantity": 1.00,
+                    "name": "Ботинки зимние   мужские МИСТРАЛЬ ULTRA    размер 42 , коричневый/желтый.",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6216008
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "Проект договора.pdf",
+            "id": 232509211
+        },
+        {
+            "companyId": null,
+            "name": "ТЗ.docx",
+            "id": 232509229
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23853341",
+    "isElectronicContractExecutionRequired": false,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmgWqOk=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "ОБУВЬ",
+    "id": 9864884
+}

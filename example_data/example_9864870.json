@@ -1,0 +1,287 @@
+{
+    "customer": {
+        "name": "Государственное бюджетное профессиональное образовательное учреждение города Москвы «Медицинский колледж № 1»",
+        "id": 14763777
+    },
+    "createdByCustomer": {
+        "name": "Государственное бюджетное профессиональное образовательное учреждение города Москвы «Медицинский колледж № 1»",
+        "id": 14763777
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "31.10.2024 10:56:14",
+    "initialDuration": 6.0,
+    "endDate": "31.10.2024 16:56:14",
+    "startCost": 188470.00000,
+    "nextCost": 185642.92000,
+    "lastBetSupplier": {
+        "name": "Другой участник",
+        "id": null
+    },
+    "lastBetCost": 186585.28000,
+    "lastBetId": 151552855,
+    "lastBet": {
+        "num": 2,
+        "cost": 186585.28000,
+        "serverTime": "31.10.2024 15:14:38",
+        "isAutoBet": false,
+        "auctionId": 9864870,
+        "supplierId": 2074391,
+        "createUserId": 20262218,
+        "lastManualServerTime": null,
+        "supplier": {
+            "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЮНЭКСТ\"",
+            "id": 2074391
+        },
+        "id": 151552855
+    },
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 8.00000,
+            "costPerUnit": 12610.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Шины и покрышки пневматические для легковых автомобилей новые",
+            "productionDirectoryName": "Шины пневматические для легкового автомобиля",
+            "oksm": null,
+            "name": null,
+            "id": 22138992
+        },
+        {
+            "currentValue": 8.00000,
+            "costPerUnit": 9800.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Изделия крепежные резьбовые из черных металлов, не включенные в другие группировки",
+            "productionDirectoryName": "Диски колесные",
+            "oksm": null,
+            "name": null,
+            "id": 22138993
+        },
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 3510.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Части и принадлежности для автотранспортных средств",
+            "productionDirectoryName": "Запасные части для легковых автомобилей",
+            "oksm": null,
+            "name": null,
+            "id": 22138994
+        },
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 1085.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Части и принадлежности для автотранспортных средств",
+            "productionDirectoryName": "Запасные части для легковых автомобилей",
+            "oksm": null,
+            "name": null,
+            "id": 22138995
+        }
+    ],
+    "bets": [
+        {
+            "num": 2,
+            "cost": 186585.28000,
+            "serverTime": "31.10.2024 15:14:38",
+            "isAutoBet": false,
+            "auctionId": 9864870,
+            "supplierId": 2074391,
+            "createUserId": 20262218,
+            "lastManualServerTime": null,
+            "supplier": {
+                "name": "Другой участник",
+                "id": null
+            },
+            "id": 151552855
+        },
+        {
+            "num": 1,
+            "cost": 187527.64000,
+            "serverTime": "31.10.2024 11:21:42",
+            "isAutoBet": false,
+            "auctionId": 9864870,
+            "supplierId": 1962821,
+            "createUserId": 1407851,
+            "lastManualServerTime": null,
+            "supplier": {
+                "name": "Другой участник",
+                "id": null
+            },
+            "id": 151541534
+        }
+    ],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 2,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "31.10.2024 15:39:30",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "п. 5 ч. 1 ст. 93 Закупка объёмом до 600 тысяч рублей",
+    "items": [
+        {
+            "currentValue": 8.00000,
+            "costPerUnit": 12610.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38296609,
+            "imageId": 231747997,
+            "defaultImageId": null,
+            "okpdName": "Шины и покрышки пневматические для легковых автомобилей новые",
+            "productionDirectoryName": "Шины пневматические для легкового автомобиля",
+            "oksm": null,
+            "name": "Шина зимняя IKON (NOKIAN TYRES) AUTOGRAPH SNOW 3 215/50 R17 95R ",
+            "id": 22138992
+        },
+        {
+            "currentValue": 8.00000,
+            "costPerUnit": 9800.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38301244,
+            "imageId": 232033195,
+            "defaultImageId": null,
+            "okpdName": "Изделия крепежные резьбовые из черных металлов, не включенные в другие группировки",
+            "productionDirectoryName": "Диски колесные",
+            "oksm": null,
+            "name": "Диск колесный Khomen Wheels 7x17/5x108 ET40 D54,1 KHW1714 (Jac/Москвич 3) F-Silver",
+            "id": 22138993
+        },
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 3510.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38296726,
+            "imageId": 231755182,
+            "defaultImageId": null,
+            "okpdName": "Части и принадлежности для автотранспортных средств",
+            "productionDirectoryName": "Запасные части для легковых автомобилей",
+            "oksm": null,
+            "name": "Щетки стеклоочистителя Bosch A295S 600/400",
+            "id": 22138994
+        },
+        {
+            "currentValue": 2.00000,
+            "costPerUnit": 1085.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38296729,
+            "imageId": 231755851,
+            "defaultImageId": null,
+            "okpdName": "Части и принадлежности для автотранспортных средств",
+            "productionDirectoryName": "Запасные части для легковых автомобилей",
+            "oksm": null,
+            "name": "Щетки стеклоочистителя Москвич 3 (JAC JS4) задняя OE 5205080u3400",
+            "id": 22138995
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 5,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, 119071, г. Москва, Ленинский проспект, дом 35А",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 100880.0000000,
+                    "costPerUnit": 12610.00000,
+                    "quantity": 8.00,
+                    "name": "Шина зимняя IKON (NOKIAN TYRES) AUTOGRAPH SNOW 3 215/50 R17 95R ",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 78400.0000000,
+                    "costPerUnit": 9800.00000,
+                    "quantity": 8.00,
+                    "name": "Диск колесный Khomen Wheels 7x17/5x108 ET40 D54,1 KHW1714 (Jac/Москвич 3) F-Silver",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 7020.0000000,
+                    "costPerUnit": 3510.00000,
+                    "quantity": 2.00,
+                    "name": "Щетки стеклоочистителя Bosch A295S 600/400",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 2170.0000000,
+                    "costPerUnit": 1085.00000,
+                    "quantity": 2.00,
+                    "name": "Щетки стеклоочистителя Москвич 3 (JAC JS4) задняя OE 5205080u3400",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6215928
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "Техническое задание автозапчасти (4).docx",
+            "id": 232508260
+        },
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232508272
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23849788",
+    "isElectronicContractExecutionRequired": true,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmn7mrk=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "ЗАПАСНЫЕ ЧАСТИ ДЛЯ ТРАНСПОРТНЫХ СРЕДСТВ",
+    "id": 9864870
+}

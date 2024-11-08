@@ -1,0 +1,165 @@
+{
+    "customer": {
+        "name": "Государственное бюджетное учреждение здравоохранения города Москвы «Городская клиническая больница № 15 имени О.М. Филатова Департамента здравоохранения города Москвы»",
+        "id": 14763448
+    },
+    "createdByCustomer": {
+        "name": "Государственное бюджетное учреждение здравоохранения города Москвы «Городская клиническая больница № 15 имени О.М. Филатова Департамента здравоохранения города Москвы»",
+        "id": 14763448
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "29.10.2024 09:00:00",
+    "initialDuration": 3.0,
+    "endDate": "29.10.2024 12:00:00",
+    "startCost": 15792.60000,
+    "nextCost": 15713.58000,
+    "lastBetSupplier": null,
+    "lastBetCost": null,
+    "lastBetId": null,
+    "lastBet": null,
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 12.00000,
+            "costPerUnit": 709.80000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Одежда производственная и профессиональная прочая, не включенная в другие группировки",
+            "productionDirectoryName": "Одежда специальная для защиты от термических рисков электрической дуги",
+            "oksm": null,
+            "name": null,
+            "id": 22130212
+        },
+        {
+            "currentValue": 6.00000,
+            "costPerUnit": 1212.50000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Обувь специальная диэлектрическая из полимерных материалов",
+            "productionDirectoryName": "Обувь специальная диэлектрическая",
+            "oksm": null,
+            "name": null,
+            "id": 22130214
+        }
+    ],
+    "bets": [],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 0,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "28.10.2024 17:39:34",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "п. 4 ч. 1 ст. 93 Закупка объемом до 600 тысяч рублей",
+    "items": [
+        {
+            "currentValue": 12.00000,
+            "costPerUnit": 709.80000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": 36108571,
+            "imageId": 2129435144,
+            "defaultImageId": null,
+            "okpdName": "Одежда производственная и профессиональная прочая, не включенная в другие группировки",
+            "productionDirectoryName": "Одежда специальная для защиты от термических рисков электрической дуги",
+            "oksm": null,
+            "name": "Перчатки резиновые диэлектрические АЗРИЭЛЕКТРО класс 0 р. 2",
+            "id": 22130212
+        },
+        {
+            "currentValue": 6.00000,
+            "costPerUnit": 1212.50000,
+            "okeiName": "пар",
+            "createdOfferId": null,
+            "skuId": 18162219,
+            "imageId": 1818628797,
+            "defaultImageId": null,
+            "okpdName": "Обувь специальная диэлектрическая из полимерных материалов",
+            "productionDirectoryName": "Обувь специальная диэлектрическая",
+            "oksm": null,
+            "name": "Боты диэлектрические размер 44",
+            "id": 22130214
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 30,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, 111539, город Москва, улица Вешняковская, дом 23",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 8517.6000000,
+                    "costPerUnit": 709.80000,
+                    "quantity": 12.00,
+                    "name": "Перчатки резиновые диэлектрические АЗРИЭЛЕКТРО класс 0 р. 2",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 7275.0000000,
+                    "costPerUnit": 1212.50000,
+                    "quantity": 6.00,
+                    "name": "Боты диэлектрические размер 44",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6205162
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232178142
+        },
+        {
+            "companyId": null,
+            "name": "ТЗ поставка диэл. СЗ.docx",
+            "id": 232178164
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23787203",
+    "isElectronicContractExecutionRequired": true,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmRB+Oc=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "ОДЕЖДА (ВКЛЮЧАЯ ФОРМЕННУЮ), ОБУВЬ, ГАЛАНТЕРЕЯ, ГОЛОВНЫЕ УБОРЫ",
+    "id": 9862417
+}

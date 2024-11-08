@@ -1,0 +1,250 @@
+{
+    "customer": {
+        "name": "Государственное бюджетное общеобразовательное учреждение города Москвы «Центр спорта и образования «Самбо-70» Департамента спорта города Москвы",
+        "id": 1139818
+    },
+    "createdByCustomer": {
+        "name": "Государственное бюджетное общеобразовательное учреждение города Москвы «Центр спорта и образования «Самбо-70» Департамента спорта города Москвы",
+        "id": 1139818
+    },
+    "state": {
+        "name": "Снята с публикации",
+        "id": 19000005
+    },
+    "startDate": "31.10.2024 09:10:11",
+    "initialDuration": 6.0,
+    "endDate": "31.10.2024 15:10:11",
+    "startCost": 411760.00000,
+    "nextCost": 405583.60000,
+    "lastBetSupplier": {
+        "name": "Другой участник",
+        "id": null
+    },
+    "lastBetCost": 407642.40000,
+    "lastBetId": 151540562,
+    "lastBet": {
+        "num": 2,
+        "cost": 407642.40000,
+        "serverTime": "31.10.2024 10:52:35",
+        "isAutoBet": false,
+        "auctionId": 9864533,
+        "supplierId": 2314147,
+        "createUserId": 1521795,
+        "lastManualServerTime": null,
+        "supplier": {
+            "name": "Индивидуальный предприниматель Нещадимов Алексей Владимирович",
+            "id": 2314147
+        },
+        "id": 151540562
+    },
+    "step": 0.00000,
+    "auctionItem": [
+        {
+            "currentValue": 1.00000,
+            "costPerUnit": 31760.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Комплектующие и принадлежности для автотранспортных средств, не включенные в другие группировки",
+            "productionDirectoryName": "Аксессуары для автотранспорта и спецтехники",
+            "oksm": null,
+            "name": null,
+            "id": 22137987
+        },
+        {
+            "currentValue": 20.00000,
+            "costPerUnit": 9500.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Шины и покрышки пневматические для легковых автомобилей новые",
+            "productionDirectoryName": "Шины пневматические для легкового автомобиля",
+            "oksm": null,
+            "name": null,
+            "id": 22137988
+        },
+        {
+            "currentValue": 20.00000,
+            "costPerUnit": 9500.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": null,
+            "imageId": null,
+            "defaultImageId": null,
+            "okpdName": "Шины и покрышки пневматические для легковых автомобилей новые",
+            "productionDirectoryName": "Шины пневматические для легкового автомобиля",
+            "oksm": null,
+            "name": null,
+            "id": 22137989
+        }
+    ],
+    "bets": [
+        {
+            "num": 2,
+            "cost": 407642.40000,
+            "serverTime": "31.10.2024 10:52:35",
+            "isAutoBet": false,
+            "auctionId": 9864533,
+            "supplierId": 2314147,
+            "createUserId": 1521795,
+            "lastManualServerTime": null,
+            "supplier": {
+                "name": "Другой участник",
+                "id": null
+            },
+            "id": 151540562
+        },
+        {
+            "num": 1,
+            "cost": 409701.20000,
+            "serverTime": "31.10.2024 09:21:38",
+            "isAutoBet": false,
+            "auctionId": 9864533,
+            "supplierId": 28362514,
+            "createUserId": 20202182,
+            "lastManualServerTime": null,
+            "supplier": {
+                "name": "Другой участник",
+                "id": null
+            },
+            "id": 151538267
+        }
+    ],
+    "offerSignTime": null,
+    "uniqueSupplierCount": 2,
+    "auctionRegion": [
+        {
+            "treePathId": ".1.504.",
+            "socr": "г",
+            "id": 504,
+            "oktmo": "45000000",
+            "code": "7700000000000",
+            "name": "г Москва"
+        }
+    ],
+    "repeatId": null,
+    "unpublishName": "Ошибка создания/содержания котировочной сессии",
+    "unpublishDate": "31.10.2024 12:49:43",
+    "federalLawName": "44-ФЗ",
+    "conclusionReasonName": "п. 4 ч. 1 ст. 93 Закупка объемом до 600 тысяч рублей",
+    "items": [
+        {
+            "currentValue": 1.00000,
+            "costPerUnit": 31760.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38143448,
+            "imageId": 228520509,
+            "defaultImageId": null,
+            "okpdName": "Комплектующие и принадлежности для автотранспортных средств, не включенные в другие группировки",
+            "productionDirectoryName": "Аксессуары для автотранспорта и спецтехники",
+            "oksm": null,
+            "name": "Устройство пускозарядное CARKU PRO MAX 2500А, 270 х 189 х 160мм",
+            "id": 22137987
+        },
+        {
+            "currentValue": 20.00000,
+            "costPerUnit": 9500.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 19353730,
+            "imageId": 1847247603,
+            "defaultImageId": null,
+            "okpdName": "Шины и покрышки пневматические для легковых автомобилей новые",
+            "productionDirectoryName": "Шины пневматические для легкового автомобиля",
+            "oksm": null,
+            "name": "Шина зимняя Yokohama Ice Guard IG35+ 215/50 R17 95T XL",
+            "id": 22137988
+        },
+        {
+            "currentValue": 20.00000,
+            "costPerUnit": 9500.00000,
+            "okeiName": "шт",
+            "createdOfferId": null,
+            "skuId": 38140638,
+            "imageId": 228309375,
+            "defaultImageId": null,
+            "okpdName": "Шины и покрышки пневматические для легковых автомобилей новые",
+            "productionDirectoryName": "Шины пневматические для легкового автомобиля",
+            "oksm": null,
+            "name": "Шина зимняя Leao Winter Defender Grip 225/45 R18 95T ",
+            "id": 22137989
+        }
+    ],
+    "deliveries": [
+        {
+            "periodDaysFrom": 1,
+            "periodDaysTo": 10,
+            "periodDateFrom": null,
+            "periodDateTo": null,
+            "deliveryPlace": "г г Москва, 117133, город Москва, улица Академика Виноградова, дом 4Б",
+            "quantity": 0.0,
+            "items": [
+                {
+                    "sum": 31760.0000000,
+                    "costPerUnit": 31760.00000,
+                    "quantity": 1.00,
+                    "name": "Устройство пускозарядное CARKU PRO MAX 2500А, 270 х 189 х 160мм",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 190000.0000000,
+                    "costPerUnit": 9500.00000,
+                    "quantity": 20.00,
+                    "name": "Шина зимняя Yokohama Ice Guard IG35+ 215/50 R17 95T XL",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                },
+                {
+                    "sum": 190000.0000000,
+                    "costPerUnit": 9500.00000,
+                    "quantity": 20.00,
+                    "name": "Шина зимняя Leao Winter Defender Grip 225/45 R18 95T ",
+                    "buyerId": null,
+                    "isBuyerInvitationSent": false,
+                    "isApprovedByBuyer": null
+                }
+            ],
+            "id": 6214700
+        }
+    ],
+    "files": [
+        {
+            "companyId": null,
+            "name": "ТЗ № П-ПУиЗР-2024.docx",
+            "id": 232480287
+        },
+        {
+            "companyId": null,
+            "name": "Проект контракта.pdf",
+            "id": 232480290
+        }
+    ],
+    "licenseFiles": [],
+    "offersSigned": false,
+    "showPurchaseRequestMessageIfFailed": false,
+    "purchaseTypeId": 1,
+    "contractCost": null,
+    "contracts": [],
+    "unpublishComment": null,
+    "externalId": "23836240",
+    "isElectronicContractExecutionRequired": true,
+    "isContractGuaranteeRequired": false,
+    "contractGuaranteeAmount": null,
+    "rowVersion": "AAAAAmlsxcE=",
+    "organizingTypeId": 1,
+    "sharedPurchaseBuyers": null,
+    "suppliersAutobetSettings": [],
+    "isLicenseProduction": false,
+    "uploadLicenseDocumentsComment": null,
+    "isExternalIntegration": true,
+    "name": "ЗАПАСНЫЕ ЧАСТИ ДЛЯ ТРАНСПОРТНЫХ СРЕДСТВ",
+    "id": 9864533
+}
