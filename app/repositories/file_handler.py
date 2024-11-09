@@ -4,29 +4,30 @@ import textract
 from docx.api import Document
 import mimetypes
 import requests
-
+import cgi
+from urllib.parse import unquote
 
 class FileHandler:
 
-    def __is_task_desciption_document(self, path):
+    def __is_task_desciption_document(self, filename):
         KEYWORDS = [
             'тз',
             'техническое задание',
             'техническое_задание',
             'техническое-задание',
         ]
-        filename = os.path.basename(path).lower()
+        filename = filename.lower()
         for keyword in KEYWORDS:
             if keyword in filename:
                 return True
         return False
 
-    def __is_contract_document(self, path):
+    def __is_contract_document(self, filename):
         KEYWORDS = [
             'контракт',
             'договор',
         ]
-        filename = os.path.basename(path).lower()
+        filename = filename.lower()
         for keyword in KEYWORDS:
             if keyword in filename:
                 return True
@@ -89,13 +90,26 @@ class FileHandler:
         try:
             query = requests.get(url)
             content_type = query.headers['Content-Type']
+
+            content_disposition = query.headers['Content-Disposition']
+            _, content_disposition_params = cgi.parse_header(content_disposition)
+
+            if 'filename*' in content_disposition_params.keys():
+                filename = content_disposition_params['filename*']
+                filename = unquote(filename)
+            else:
+                filename = content_disposition_params['filename']
+            print(filename)
+
+            is_TZ = self.__is_task_desciption_document(filename)
+
             file_extension = mimetypes.guess_extension(content_type.split(';')[0])
             output_path = "./assets/session_file"+file_id+file_extension
 
             response = requests.get(url)
             with open(output_path, 'wb') as file:
                 file.write(response.content)
-            return output_path
+            return output_path, is_TZ
         except:
             print("Error: unable to download file via file_id", file_id)
             return None
@@ -104,29 +118,44 @@ class FileHandler:
     def __delete_file(self, path):
         os.remove(path)
 
-    def __save_txt_file(self, file_id, text):
+    def __save_txt_file(self, file_id, text, is_TZ):
         path = "./assets/text_file"+file_id+".txt"
         with open(path, 'w') as file:
             file.write(text)
+        if is_TZ:
+            path_is_TZ = "./assets/bool_tz"+file_id
+            with open(path_is_TZ, 'w') as file_is_TZ:
+                file_is_TZ.write("")
 
     def handle_file(self, file_id):
         path_text_file = "./assets/text_file"+file_id+".txt"
         if os.path.exists(path_text_file):
+            is_TZ = os.path.exists("./assets/bool_tz"+file_id)
             text = open(path_text_file, 'r').read()
-            result = File(text=text)
+            result = File(
+                text=text,
+                is_TZ=is_TZ,
+            )
             return result
         else:
-            path = self.__download_file(file_id)
+            path, is_TZ = self.__download_file(file_id)
             if path is None:
                 return None
+
             text = self.__file_to_text(path)
-            self.__save_txt_file(file_id, text)
+
+            self.__save_txt_file(file_id, text, is_TZ)
+
             result = File(
-                text=text
+                text=text,
+                is_TZ=is_TZ
             )
-            result.is_TZ = self.__is_task_desciption_document(path)
+
             self.__delete_file(path)
             return result
+
+handler = FileHandler()
+print(handler.handle_file("232508260"))
 
 
 

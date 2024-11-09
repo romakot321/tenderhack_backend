@@ -12,6 +12,7 @@ class QuoteSession(BaseModel):
 class File(BaseModel):
     text: str
     data: List[List[Dict[str, str]]] | None = None
+    is_TZ: bool
 
 class Criteries(BaseModel):
     criteries: List[str]
