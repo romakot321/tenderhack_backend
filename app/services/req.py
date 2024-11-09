@@ -2,6 +2,8 @@ from app.models.dtos import AuctionUrl
 from app.models.aucton import Auction
 from requests import request
 from http import HTTPMethod
+from fastapi import HTTPException
+from http import HTTPStatus
 class RequestService:
 
     async def req_to_get_auction(self, auction_url: AuctionUrl) -> Auction:
@@ -11,5 +13,5 @@ class RequestService:
         try:
             auction = Auction.model_validate(json_data)
         except ValueError as e:
-            print("Error parsing response data:", e)
+            raise HTTPException(HTTPStatus.BAD_REQUEST)
         return auction
