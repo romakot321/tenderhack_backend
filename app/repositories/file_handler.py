@@ -154,9 +154,6 @@ class FileHandler:
             self.__delete_file(path)
             return result
 
-handler = FileHandler()
-print(handler.handle_file("232508260"))
-
 
 
 
