@@ -1,16 +1,15 @@
-from typing import Dict
 from app.models.dtos import QuoteSession
-from fastapi import HTTPException
-from http import HTTPStatus
 class QSRepository:
     db = dict[int, QuoteSession]()
 
-    def get_qs(self, id: int) -> QuoteSession:
+    async def get_qs(self, id: int) -> QuoteSession:
         return self.db.get(id)
-    def create_qs(self, id: int) -> QuoteSession:
-        if self.get_qs(id) != None:
-            raise HTTPException(status_code=HTTPStatus.CONFLICT)
+    async def create_or_update_qs(self, id: int) -> QuoteSession:
         self.db[id] = QuoteSession(id=id, status=False, reason="", warning=False)
-        qs = self.get_qs(id)
+        qs = await self.get_qs(id)
         return qs
+
+    async def update_qs(self, qs: QuoteSession) :
+        self.db[qs.id] = qs
+        return
 
