@@ -114,8 +114,8 @@ class Auction(BaseModel):
     uniqueSupplierCount: int
     auctionRegion: List[AuctionRegion]
     repeatId: Optional[int]
-    unpublishName: str
-    unpublishDate: str
+    unpublishName: Optional[str]
+    unpublishDate: Optional[str]
     federalLawName: str
     conclusionReasonName: str
     items: List[Item]
@@ -128,7 +128,7 @@ class Auction(BaseModel):
     contractCost: Optional[float]
     contracts: List[str]
     unpublishComment: Optional[str]
-    externalId: str
+    externalId: Optional[str]
     isElectronicContractExecutionRequired: bool
     isContractGuaranteeRequired: bool
     contractGuaranteeAmount: Optional[float]
