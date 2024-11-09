@@ -6,8 +6,8 @@ from fastapi import HTTPException
 from http import HTTPStatus
 class RequestService:
 
-    async def req_to_get_auction(self, auction_url: AuctionUrl) -> Auction:
-        resp = request(HTTPMethod.GET, url=auction_url.url, timeout=3)
+    async def req_to_get_auction(self, url: str) -> Auction:
+        resp = request(HTTPMethod.GET, url=url, timeout=3)
         json_data = resp.json()
         auction = None
         try:
