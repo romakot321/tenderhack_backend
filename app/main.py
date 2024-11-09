@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from fastapi.openapi.docs import (
     get_swagger_ui_html,
 )
-
+import uvicorn
 def register_exception(application):
     @application.exception_handler(RequestValidationError)
     async def validation_exception_handler(request, exc):
@@ -24,9 +24,9 @@ def init_web_application():
 
     register_exception(application)
 
-    from app.routes.auction import router as hello_router
+    from app.routes.auction import router as auction_router
 
-    application.include_router(hello_router)
+    application.include_router(auction_router)
 
     @application.get("/api/docs", include_in_schema=False)
     async def custom_swagger_ui_html():
@@ -45,6 +45,8 @@ def run() -> FastAPI:
     application = init_web_application()
     return application
 
+fastapi_app = run()
+
 if __name__ == "__main__":
-    fastapi_app = run()
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=8000)
 
