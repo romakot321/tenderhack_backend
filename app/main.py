@@ -7,6 +7,7 @@ from fastapi.openapi.docs import (
 from contextlib import asynccontextmanager
 import asyncio
 import uuid
+import uvicorn
 
 from app.services.llm import LLMService
 
@@ -39,9 +40,9 @@ def init_web_application():
 
     register_exception(application)
 
-    from app.routes.auction import router as hello_router
+    from app.routes.auction import router as auction_router
 
-    application.include_router(hello_router)
+    application.include_router(auction_router)
 
     @application.get("/api/docs", include_in_schema=False)
     async def custom_swagger_ui_html():
@@ -60,5 +61,7 @@ def run() -> FastAPI:
     application = init_web_application()
     return application
 
-
 fastapi_app = run()
+
+if __name__ == "__main__":
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=8000)

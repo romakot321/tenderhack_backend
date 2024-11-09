@@ -103,10 +103,10 @@ class Auction(BaseModel):
     endDate: str
     startCost: float
     nextCost: float
-    lastBetSupplier: Supplier
-    lastBetCost: float
-    lastBetId: int
-    lastBet: Bet
+    lastBetSupplier: Optional[Supplier]
+    lastBetCost: Optional[float]
+    lastBetId: Optional[int]
+    lastBet: Optional[Bet]
     step: float
     auctionItem: List[AuctionItem]
     bets: List[Bet]
@@ -114,10 +114,10 @@ class Auction(BaseModel):
     uniqueSupplierCount: int
     auctionRegion: List[AuctionRegion]
     repeatId: Optional[int]
-    unpublishName: str
-    unpublishDate: str
+    unpublishName: Optional[str]
+    unpublishDate: Optional[str]
     federalLawName: str
-    conclusionReasonName: str
+    conclusionReasonName: Optional[str]
     items: List[Item]
     deliveries: List[Delivery]
     files: List[File]
@@ -128,14 +128,14 @@ class Auction(BaseModel):
     contractCost: Optional[float]
     contracts: List[str]
     unpublishComment: Optional[str]
-    externalId: str
+    externalId: Optional[str]
     isElectronicContractExecutionRequired: bool
     isContractGuaranteeRequired: bool
     contractGuaranteeAmount: Optional[float]
     rowVersion: str
     organizingTypeId: int
     sharedPurchaseBuyers: Optional[List[Customer]]
-    suppliersAutobetSettings: List[str]
+    suppliersAutobetSettings: Optional[List[str]]
     isLicenseProduction: bool
     uploadLicenseDocumentsComment: Optional[str]
     isExternalIntegration: bool
