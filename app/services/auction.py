@@ -15,16 +15,15 @@ class AuctionService:
         self.req_service = req_service
 
     async def create_qs(self, auction_url: AuctionUrl):
-        # TODO: get data of auction and send it to RabitMQ
         auction = await self.req_service.req_to_get_auction(auction_url)
-        print(auction)
+        # TODO: send auction to RabitMQ
 
-        id = auction_url.url.split()[-1]
-        if id.isdigit() != True:
-            raise HTTPException(status_code=HTTPStatus.BAD_REQUEST)
-        id = int(id)
+        id = auction.id
         return self.qs_repository.create_qs(id)
 
     async def get_qs(self, id: int) -> QuoteSession:
-        return self.qs_repository.get_qs(id)
+        qs = self.qs_repository.get_qs(id)
+        if qs == None:
+            raise HTTPException(HTTPStatus.BAD_REQUEST)
+        return qs
 
