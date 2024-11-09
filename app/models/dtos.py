@@ -11,7 +11,7 @@ class QuoteSession(BaseModel):
 
 class File(BaseModel):
     text: str
-    data: Optional[List[List[Dict[str, str]]]]
+    data: List[List[Dict[str, str]]] | None = None
 
 class Criteries(BaseModel):
     criteries: List[str]
