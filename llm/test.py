@@ -1,7 +1,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Загрузка модели и токенизатора
-model_name = "Vikhrmodels/Vikhr-Qwen-2.5-0.5B-Instruct"
+model_name = "ai-forever/rugpt3large_based_on_gpt2"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -16,18 +16,20 @@ messages = [
 ]
 
 # Токенизация и генерация текста
-input_ids = tokenizer.apply_chat_template(messages, truncation=True, return_tensors="pt")
-output = model.generate(
-    input_ids,
-    max_new_tokens=256,
-    temperature=0.32,
-    num_return_sequences=1,
-    no_repeat_ngram_size=2,
-    top_k=50,
-    top_p=0.95,
-)
+#input_ids = tokenizer.apply_chat_template(messages, truncation=True, return_tensors="pt")
+while True:
+    input_ids = tokenizer.encode(input_text, return_tensors='pt')
+    output = model.generate(
+        input_ids,
+        max_length=100,
+        num_return_sequences=3,
+        top_p=0.9,
+        do_sample=True,
+        num_beams=5,
+    )
 
 # Декодирование и вывод результата
-generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-print("Answer: ", generated_text)
+    for generated in output:
+        text = tokenizer.decode(generated, skip_special_tokens=True)
+        print("Answer: ", text)
 
