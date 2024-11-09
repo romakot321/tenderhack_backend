@@ -32,5 +32,7 @@ services:
     restart: always
     environment:
       - RABBIT_MQ_ERLANG_COOKIE='secret cookie here'
+    ports:
+      - "5672:5672"
     networks:
       default:

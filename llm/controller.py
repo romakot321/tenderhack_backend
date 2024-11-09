@@ -11,11 +11,11 @@ class LLMController:
         self.worker.run()
 
     def prepare_prompt(self, request) -> str:
-        return "В чем смысл жизни?"
+        return request
 
     def on_message(self, ch, method, properties, body):
-        print(method)
-        prompt = self.prepare_prompt(body)
+        print("Received:", body)
+        prompt = self.prepare_prompt(body.decode())
         result = self.service.generate(prompt)
         self.worker.answer(result)
 

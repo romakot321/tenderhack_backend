@@ -4,6 +4,11 @@ from fastapi.responses import JSONResponse
 from fastapi.openapi.docs import (
     get_swagger_ui_html,
 )
+from contextlib import asynccontextmanager
+import asyncio
+import uuid
+
+from app.services.llm import LLMService
 
 def register_exception(application):
     @application.exception_handler(RequestValidationError)
@@ -15,11 +20,21 @@ def register_exception(application):
             content=content, status_code=status.HTTP_422_UNPROCESSABLE_ENTITY
         )
 
+
+@asynccontextmanager
+async def application_lifespan(app: FastAPI):
+    llm_service = LLMService()
+    asyncio.create_task(llm_service.connect())
+    await llm_service.publish(str(uuid.uuid4()))
+    yield
+
+
 def init_web_application():
     application = FastAPI(
         openapi_url="/api/openapi.json",
         docs_url=None,
-        redoc_url=None
+        redoc_url=None,
+        lifespan=application_lifespan
     )
 
     register_exception(application)

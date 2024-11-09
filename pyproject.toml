@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hse-python-backend"
+name = "tenderhack_backend"
 version = "0.1.0"
 description = ""
 authors = ["sleeter <lfmonsterfeed@gmail.com>"]
@@ -10,6 +10,9 @@ python = "^3.12"
 uvicorn = "^0.30.6"
 fastapi = "^0.114.2"
 prometheus-fastapi-instrumentator = "^7.0.0"
+aio-pika = "^9.4.3"
+loguru = "^0.7.2"
+gunicorn = "^23.0.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.3"
