@@ -14,6 +14,7 @@ class LLMController:
         return "В чем смысл жизни?"
 
     def on_message(self, ch, method, properties, body):
+        print(method)
         prompt = self.prepare_prompt(body)
         result = self.service.generate(prompt)
         self.worker.answer(result)
