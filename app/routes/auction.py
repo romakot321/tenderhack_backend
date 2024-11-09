@@ -16,5 +16,9 @@ async def post_url(
 
 
 @router.get("/qs/{id}", status_code=200)
-async def get_gs(id: int):
-    pass
+async def get_qs(
+        id: int,
+        service: AuctionService = Depends()
+):
+    qs = await service.get_qs(id)
+    return qs
