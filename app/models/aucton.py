@@ -23,8 +23,8 @@ class AuctionItem(BaseModel):
     skuId: Optional[int]
     imageId: Optional[int]
     defaultImageId: Optional[int]
-    okpdName: str
-    productionDirectoryName: str
+    okpdName: Optional[str]
+    productionDirectoryName: Optional[str]
     oksm: Optional[str]
     name: Optional[str]
     id: int
@@ -47,7 +47,7 @@ class AuctionRegion(BaseModel):
     treePathId: str
     socr: str
     id: int
-    oktmo: str
+    oktmo: Optional[str]
     code: str
     name: str
 
@@ -60,8 +60,8 @@ class Item(BaseModel):
     skuId: Optional[int]
     imageId: Optional[int]
     defaultImageId: Optional[int]
-    okpdName: str
-    productionDirectoryName: str
+    okpdName: Optional[str]
+    productionDirectoryName: Optional[str]
     oksm: Optional[str]
     name: str
     id: int
@@ -87,6 +87,16 @@ class Delivery(BaseModel):
     items: List[DeliveryItem]
     id: int
 
+class SupplierAutobetSetting(BaseModel):
+    auctionId: int
+    finalMinPrice: float
+    autobetIsOn: bool
+    supplierId: int
+    orderNumber: int
+    spUserId: int
+    systemUserId: Optional[int] = None
+    notShowWarningOnExceedFinalMinPrice: bool
+    id: int
 
 class File(BaseModel):
     companyId: Optional[int]
@@ -101,8 +111,8 @@ class Auction(BaseModel):
     startDate: str
     initialDuration: float
     endDate: str
-    startCost: float
-    nextCost: float
+    startCost: Optional[float]
+    nextCost: Optional[float]
     lastBetSupplier: Optional[Supplier]
     lastBetCost: Optional[float]
     lastBetId: Optional[int]
@@ -135,7 +145,7 @@ class Auction(BaseModel):
     rowVersion: str
     organizingTypeId: int
     sharedPurchaseBuyers: Optional[List[Customer]]
-    suppliersAutobetSettings: Optional[List[str]]
+    suppliersAutobetSettings: Optional[List[SupplierAutobetSetting]]
     isLicenseProduction: bool
     uploadLicenseDocumentsComment: Optional[str]
     isExternalIntegration: bool
