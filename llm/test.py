@@ -18,6 +18,7 @@ messages = [
 # Токенизация и генерация текста
 #input_ids = tokenizer.apply_chat_template(messages, truncation=True, return_tensors="pt")
 while True:
+    input_text = input("Введите промпт: ")
     input_ids = tokenizer.encode(input_text, return_tensors='pt')
     output = model.generate(
         input_ids,
