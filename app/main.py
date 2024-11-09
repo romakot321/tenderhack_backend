@@ -45,5 +45,6 @@ def run() -> FastAPI:
     application = init_web_application()
     return application
 
+if __name__ == "__main__":
+    fastapi_app = run()
 
-fastapi_app = run()
