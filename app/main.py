@@ -8,6 +8,7 @@ from contextlib import asynccontextmanager
 import asyncio
 import uuid
 import uvicorn
+import os
 
 from app.services.llm import LLMService
 
@@ -24,9 +25,10 @@ def register_exception(application):
 
 @asynccontextmanager
 async def application_lifespan(app: FastAPI):
-    llm_service = LLMService()
-    asyncio.create_task(llm_service.connect())
-    await llm_service.publish(str(uuid.uuid4()))
+    if os.getenv("LLM_ENABLE", False):
+        llm_service = LLMService()
+        asyncio.create_task(llm_service.connect())
+        await llm_service.publish(str(uuid.uuid4()))
     yield
 
 
