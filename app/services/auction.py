@@ -33,7 +33,7 @@ class AuctionService:
                         pass
                     break
                 case "license":
-                    if len(auction.licenseFiles) > 0: # Требуется проверить наличие сертификатов/лицензий
+                    if len(auction.licenseFiles) > 0 or auction.isLicenseProduction: # Требуется проверить наличие сертификатов/лицензий uploadLicenseDocumentsComment
                         pass
                     break
                 case "delivery_schedule":
