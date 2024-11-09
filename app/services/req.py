@@ -1,4 +1,3 @@
-from app.models.dtos import AuctionUrl
 from app.models.aucton import Auction
 from requests import request
 from http import HTTPMethod

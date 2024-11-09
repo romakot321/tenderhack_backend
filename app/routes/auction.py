@@ -1,16 +1,17 @@
-from fastapi import APIRouter, Depends, Response
-from app.models.dtos import QuoteSession, AuctionUrl
+from fastapi import APIRouter, Depends, Response, Query
+from app.models.dtos import QuoteSession, AuctionSchema
 from app.services.auction import AuctionService
+from typing import Optional
 
 router = APIRouter(prefix='/api/auction', tags=['Auction'])
 
 @router.post("/url", response_model=QuoteSession, status_code=201)
 async def post_url(
         response: Response,
-        auction_url: AuctionUrl,
+        auction_schema: AuctionSchema,
         service: AuctionService = Depends()
 ):
-    qs = await service.create_qs(auction_url)
+    qs = await service.create_qs(auction_schema)
     response.headers["location"] = f"/api/auction/qs/{qs.id}"
     return qs
 

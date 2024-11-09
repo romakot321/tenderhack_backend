@@ -1,8 +1,9 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict
 
-class AuctionUrl(BaseModel):
+class AuctionSchema(BaseModel):
     url: str
+    criteries: Optional[List[str]]
 
 class QuoteSession(BaseModel):
     id: int
@@ -14,7 +15,4 @@ class File(BaseModel):
     text: str
     data: Optional[List[List[Dict[str, str]]]]
     is_TZ: bool
-
-class Criteries(BaseModel):
-    criteries: List[str]
 

@@ -1,6 +1,6 @@
 from fastapi import Depends, HTTPException
 from app.repositories.qs import QSRepository
-from app.models.dtos import AuctionUrl, QuoteSession
+from app.models.dtos import AuctionSchema, QuoteSession
 from http import HTTPStatus
 from .req import RequestService
 
@@ -15,8 +15,8 @@ class AuctionService:
         self.qs_repository = qs_repository
         self.req_service = req_service
 
-    async def create_qs(self, auction_url: AuctionUrl) -> QuoteSession:
-        id = auction_url.url.rstrip("/").split("/")[-1]
+    async def create_qs(self, auction_schema: AuctionSchema) -> QuoteSession:
+        id = auction_schema.url.rstrip("/").split("/")[-1]
         if not id.isdigit():
             raise HTTPException(HTTPStatus.UNPROCESSABLE_ENTITY)
 
