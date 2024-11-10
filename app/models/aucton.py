@@ -14,6 +14,9 @@ class State(BaseModel):
     name: str
     id: int
 
+class Oksm(BaseModel):
+    name: str
+    id: int
 
 class AuctionItem(BaseModel):
     currentValue: float
@@ -25,7 +28,7 @@ class AuctionItem(BaseModel):
     defaultImageId: Optional[int]
     okpdName: Optional[str]
     productionDirectoryName: Optional[str]
-    oksm: Optional[str]
+    oksm: Optional[Oksm]
     name: Optional[str]
     id: int
 
@@ -45,10 +48,10 @@ class Bet(BaseModel):
 
 class AuctionRegion(BaseModel):
     treePathId: str
-    socr: str
+    socr: Optional[str]
     id: int
     oktmo: Optional[str]
-    code: str
+    code: Optional[str]
     name: str
 
 
@@ -62,7 +65,7 @@ class Item(BaseModel):
     defaultImageId: Optional[int]
     okpdName: Optional[str]
     productionDirectoryName: Optional[str]
-    oksm: Optional[str]
+    oksm: Optional[Oksm]
     name: str
     id: int
 
@@ -92,7 +95,7 @@ class SupplierAutobetSetting(BaseModel):
     finalMinPrice: float
     autobetIsOn: bool
     supplierId: int
-    orderNumber: int
+    orderNumber: Optional[int]
     spUserId: int
     systemUserId: Optional[int] = None
     notShowWarningOnExceedFinalMinPrice: bool
@@ -100,6 +103,24 @@ class SupplierAutobetSetting(BaseModel):
 
 class File(BaseModel):
     companyId: Optional[int]
+    name: str
+    id: int
+
+class FileType(BaseModel):
+    name: str
+    id: int
+
+class LicenseFile(BaseModel):
+    fileName: str
+    fileHash: str
+    fileSize: int
+    signatures: List[str] = Field(default_factory=list)
+    fileUrl: Optional[str]
+    downloadFailed: Optional[bool]
+    fileType: FileType
+    fileDataId: int
+    ownerSystemUserId: int
+    sourceTemplateId: Optional[int]
     name: str
     id: int
 
@@ -131,7 +152,7 @@ class Auction(BaseModel):
     items: List[Item]
     deliveries: List[Delivery]
     files: List[File]
-    licenseFiles: List[File]
+    licenseFiles: List[LicenseFile]
     offersSigned: bool
     showPurchaseRequestMessageIfFailed: bool
     purchaseTypeId: int
