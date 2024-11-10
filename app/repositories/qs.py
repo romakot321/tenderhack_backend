@@ -1,15 +1,20 @@
 from app.models.dtos import QuoteSession
-class QSRepository:
-    db = dict[int, QuoteSession]()
 
+db = dict[int, QuoteSession]()
+
+
+class QSRepository:
     async def get_qs(self, id: int) -> QuoteSession:
-        return self.db.get(id)
+        print("Get", db, id)
+        return db.get(id)
+
     async def create_or_update_qs(self, id: int) -> QuoteSession:
-        self.db[id] = QuoteSession(id=id, status=False, reason="", warning=False)
+        db[id] = QuoteSession(id=id, status=False, reason="", warning=False)
         qs = await self.get_qs(id)
+        print("Create or update", db, qs)
         return qs
 
-    async def update_qs(self, qs: QuoteSession) :
-        self.db[qs.id] = qs
-        return
+    async def update_qs(self, qs: QuoteSession):
+        db[qs.id] = qs
+        print("Update", db, qs)
 

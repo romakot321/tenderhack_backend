@@ -14,6 +14,9 @@ class State(BaseModel):
     name: str
     id: int
 
+class Oksm(BaseModel):
+    name: str
+    id: int
 
 class AuctionItem(BaseModel):
     currentValue: float
@@ -23,9 +26,9 @@ class AuctionItem(BaseModel):
     skuId: Optional[int]
     imageId: Optional[int]
     defaultImageId: Optional[int]
-    okpdName: str
-    productionDirectoryName: str
-    oksm: Optional[str]
+    okpdName: Optional[str]
+    productionDirectoryName: Optional[str]
+    oksm: Optional[Oksm]
     name: Optional[str]
     id: int
 
@@ -45,10 +48,10 @@ class Bet(BaseModel):
 
 class AuctionRegion(BaseModel):
     treePathId: str
-    socr: str
+    socr: Optional[str]
     id: int
-    oktmo: str
-    code: str
+    oktmo: Optional[str]
+    code: Optional[str]
     name: str
 
 
@@ -60,9 +63,9 @@ class Item(BaseModel):
     skuId: Optional[int]
     imageId: Optional[int]
     defaultImageId: Optional[int]
-    okpdName: str
-    productionDirectoryName: str
-    oksm: Optional[str]
+    okpdName: Optional[str]
+    productionDirectoryName: Optional[str]
+    oksm: Optional[Oksm]
     name: str
     id: int
 
@@ -87,9 +90,37 @@ class Delivery(BaseModel):
     items: List[DeliveryItem]
     id: int
 
+class SupplierAutobetSetting(BaseModel):
+    auctionId: int
+    finalMinPrice: float
+    autobetIsOn: bool
+    supplierId: int
+    orderNumber: Optional[int]
+    spUserId: int
+    systemUserId: Optional[int] = None
+    notShowWarningOnExceedFinalMinPrice: bool
+    id: int
 
 class File(BaseModel):
     companyId: Optional[int]
+    name: str
+    id: int
+
+class FileType(BaseModel):
+    name: str
+    id: int
+
+class LicenseFile(BaseModel):
+    fileName: str
+    fileHash: str
+    fileSize: int
+    signatures: List[str] = Field(default_factory=list)
+    fileUrl: Optional[str]
+    downloadFailed: Optional[bool]
+    fileType: FileType
+    fileDataId: int
+    ownerSystemUserId: int
+    sourceTemplateId: Optional[int]
     name: str
     id: int
 
@@ -101,8 +132,8 @@ class Auction(BaseModel):
     startDate: str
     initialDuration: float
     endDate: str
-    startCost: float
-    nextCost: float
+    startCost: Optional[float]
+    nextCost: Optional[float]
     lastBetSupplier: Optional[Supplier]
     lastBetCost: Optional[float]
     lastBetId: Optional[int]
@@ -121,7 +152,7 @@ class Auction(BaseModel):
     items: List[Item]
     deliveries: List[Delivery]
     files: List[File]
-    licenseFiles: List[File]
+    licenseFiles: List[LicenseFile]
     offersSigned: bool
     showPurchaseRequestMessageIfFailed: bool
     purchaseTypeId: int
@@ -135,7 +166,7 @@ class Auction(BaseModel):
     rowVersion: str
     organizingTypeId: int
     sharedPurchaseBuyers: Optional[List[Customer]]
-    suppliersAutobetSettings: Optional[List[str]]
+    suppliersAutobetSettings: Optional[List[SupplierAutobetSetting]]
     isLicenseProduction: bool
     uploadLicenseDocumentsComment: Optional[str]
     isExternalIntegration: bool

@@ -9,7 +9,7 @@ import asyncio
 import aiohttp
 import aiofiles
 
-class FileHandler:
+class FileRepository:
 
     def __is_task_desciption_document(self, filename):
         KEYWORDS = [
