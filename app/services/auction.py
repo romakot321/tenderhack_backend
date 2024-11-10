@@ -32,43 +32,48 @@ class AuctionService:
             raise HTTPException(HTTPStatus.UNPROCESSABLE_ENTITY)
 
         auction = await self.req_service.req_to_get_auction(self.get_auction_url + str(id))
+
         qs = await self.qs_repository.create_or_update_qs(auction.id)
         qs_files = []
         for file in auction.files:
             qs_files.append(self.file_repository.handle_file(file.id))
-        params = LLMParametersSchema(qs_id=auction.id, criteria=auction_schema.criteria, files=qs_files)
 
-        auction = await self.req_service.req_to_get_auction(url)
-
+        criteria = []
         for val in Criterion:
             match val:
-                case "name": # Проверить имя на соответствие
+                case "name":  # Проверить имя на соответствие
+                    criteria.append(Criterion.NAME)
                     break
                 case "executor":
-                    if auction.isContractGuaranteeRequired: # Требуется обеспечение исполнения контракта
-                        pass
+                    if auction.isContractGuaranteeRequired:  # Требуется обеспечение исполнения контракта
+                        criteria.append(Criterion.EXECUTOR)
                     break
                 case "license":
-                    if len(auction.licenseFiles) > 0 or auction.isLicenseProduction: # Требуется проверить наличие сертификатов/лицензий uploadLicenseDocumentsComment
-                        pass
+                    if len(auction.licenseFiles) > 0 or auction.isLicenseProduction:  # Требуется проверить наличие сертификатов/лицензий uploadLicenseDocumentsComment
+                        criteria.append(Criterion.LICENCE)
                     break
                 case "delivery_schedule":
-                    if len(auction.deliveries) > 0: # Требуется проверить на соответствие даты, место и товары
-                        pass
+                    if len(auction.deliveries) > 0:  # Требуется проверить на соответствие даты, место и товары
+                        criteria.append(Criterion.DELIVERY_SCHEDULE)
                     break
                 case "max_cost":
-                    if auction.contractCost is not None: # Требуется проверить максимальную цену контракта
-                        pass
+                    if auction.contractCost is not None:  # Требуется проверить максимальную цену контракта
+                        criteria.append(Criterion.MAX_COST)
                     break
                 case "start_cost":
-                    if auction.startCost is not None: # Должно быть значение "Цена контракта"
-                        pass
+                    if auction.startCost is not None:  # Должно быть значение "Цена контракта"
+                        criteria.append(Criterion.START_COST)
                     break
-                case "task_document": # Проверить auction.deliveries.items на соответствие
+                case "task_document":  # Проверить auction.deliveries.items на соответствие
+                    for file in qs_files:
+                        if file.is_TZ:
+                            criteria.append(Criterion.TASK_DOCUMENT)
                     break
 
-        id = auction.id
-        qs = await self.qs_repository.create_or_update_qs(id)
+
+        params = LLMParametersSchema(qs_id=auction.id, criteria=auction_schema.criteria, files=qs_files)
+
+
         await self.llm_service.publish(params)
         return qs
 
