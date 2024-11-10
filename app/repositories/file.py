@@ -113,6 +113,13 @@ class FileRepository:
             filename = content_disposition_params['filename']
         is_TZ = self.__is_task_desciption_document(filename)
         file_extension = mimetypes.guess_extension(content_type.split(';')[0])
+        if file_extension is None:
+            if filename[-3:] == 'pdf':
+                file_extension = '.pdf'
+            elif filename[-3:] == 'doc':
+                file_extension = '.doc'
+            elif filename[-4:] == 'docx':
+                file_extension = '.docx'
         output_path = "./assets/session_file" + file_id + file_extension
 
         await self.__write_response_to_file(output_path, data)
