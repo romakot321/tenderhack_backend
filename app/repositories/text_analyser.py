@@ -1,5 +1,5 @@
 import spacy
-from app.repositories.file_handler import FileHandler
+from app.repositories.file import FileRepository
 import asyncio
 
 
@@ -120,7 +120,7 @@ class TextAnalyser:
             "Сканер штрих-кода 2D АТОЛ SB2108 Plus USB",
             "Шпагат джутовый 1,5 ктекс, 1 кг/боб."
         ]
-        handler = FileHandler()
+        handler = FileRepository()
         for i, id in enumerate(CONTRACT_LIST):
             result = asyncio.run(handler.handle_file(id))
             if result is None:
@@ -156,7 +156,7 @@ class TextAnalyser:
             "Сканер штрих-кода 2D АТОЛ SB2108 Plus USB",
             "Шпагат джутовый 1,5 ктекс, 1 кг/боб."
         ]
-        handler = FileHandler()
+        handler = FileRepository()
         for i, id in enumerate(TZ_LIST):
             result = asyncio.run(handler.handle_file(id))
             if result is None:

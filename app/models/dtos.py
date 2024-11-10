@@ -1,6 +1,6 @@
 from pydantic import BaseModel
-from typing import List, Optional, Dict
 from enum import StrEnum
+
 
 class Criterion(StrEnum):
     NAME = "name"
@@ -11,9 +11,11 @@ class Criterion(StrEnum):
     START_COST = "start_cost"
     TASK_DOCUMENT = "task_document"
 
+
 class AuctionSchema(BaseModel):
     url: str
     criteria: list[Criterion]
+
 
 class QuoteSession(BaseModel):
     id: int

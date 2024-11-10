@@ -36,7 +36,7 @@ class AuctionService:
         qs = await self.qs_repository.create_or_update_qs(auction.id)
         qs_files = []
         for file in auction.files:
-            qs_files.append(self.file_repository.handle_file(file.id))
+            qs_files.append(await self.file_repository.handle_file(file.id))
 
         criteria = []
         for val in Criterion:
@@ -70,9 +70,7 @@ class AuctionService:
                             criteria.append(Criterion.TASK_DOCUMENT)
                     break
 
-
         params = LLMParametersSchema(qs_id=auction.id, criteria=auction_schema.criteria, files=qs_files)
-
 
         await self.llm_service.publish(params)
         return qs

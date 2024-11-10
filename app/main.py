@@ -1,4 +1,4 @@
-from fastapi import FastAPI, status, Request
+from fastapi import FastAPI, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from fastapi.openapi.docs import (
@@ -12,6 +12,7 @@ import os
 
 from app.services.llm import LLMService
 from app.repositories.qs import QSRepository
+
 
 def register_exception(application):
     @application.exception_handler(RequestValidationError)
@@ -62,6 +63,7 @@ def init_web_application():
 def run() -> FastAPI:
     application = init_web_application()
     return application
+
 
 fastapi_app = run()
 

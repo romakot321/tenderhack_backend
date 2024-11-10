@@ -1,9 +1,11 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
+
 class Supplier(BaseModel):
     name: Optional[str]
     id: Optional[int]
+
 
 class Customer(BaseModel):
     name: str
@@ -14,9 +16,11 @@ class State(BaseModel):
     name: str
     id: int
 
+
 class Oksm(BaseModel):
     name: str
     id: int
+
 
 class AuctionItem(BaseModel):
     currentValue: float
@@ -90,6 +94,7 @@ class Delivery(BaseModel):
     items: List[DeliveryItem]
     id: int
 
+
 class SupplierAutobetSetting(BaseModel):
     auctionId: int
     finalMinPrice: float
@@ -101,14 +106,17 @@ class SupplierAutobetSetting(BaseModel):
     notShowWarningOnExceedFinalMinPrice: bool
     id: int
 
+
 class File(BaseModel):
     companyId: Optional[int]
     name: str
     id: int
 
+
 class FileType(BaseModel):
     name: str
     id: int
+
 
 class LicenseFile(BaseModel):
     fileName: str
