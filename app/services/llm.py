@@ -1,23 +1,45 @@
 import asyncio
 import uuid
-
+import json
+from fastapi import Depends
 from loguru import logger
 from aio_pika import DeliveryMode, ExchangeType, Message, connect
 from aio_pika.abc import AbstractIncomingMessage
 
+from app.repositories.qs import QSRepository
+from app.models.dtos import QuoteSession
+from app.models.llm import LLMParametersSchema
+from app.services import _llm_cache
 
 
 class LLMService:
     exchange_out_name = "requests"
     exchange_in_name = "responses"
 
+    def __init__(self, qs_repository: QSRepository = Depends()):
+        self.qs_repository = qs_repository
+
+    def _parse_answer(self, qs_id: int, text: str) -> QuoteSession:
+        return QuoteSession(
+            id=qs_id,
+            status=True,
+            reason=text,
+            warning=False
+        )
+
     async def consume(self, queue):
         while True:
             await asyncio.sleep(1)
+
             msg = await queue.get(timeout=5, fail=False)
             if not msg:
                 continue
-            logger.debug(msg.body.decode())
+
+            body = json.loads(msg.body.decode())
+            qs = self._parse_answer(body["id"], body["text"])
+            self._set_cache_analyze(body["id"], qs)
+            await self.qs_repository.update_qs(qs)
+
             await msg.ack()
 
     async def connect(self):
@@ -38,22 +60,30 @@ class LLMService:
             task = asyncio.create_task(self.consume(queue))
             await asyncio.gather(task)
 
-    async def publish(self, text: str):
-        logger.debug("Start connecting publish")
+    def _get_cached_analyze(self, qs_id: int) -> QuoteSession | None:
+        logger.debug("Get from cache " + str(qs_id) + str(_llm_cache.get(qs_id)))
+        return _llm_cache.get(qs_id)
+
+    def _set_cache_analyze(self, qs_id: int, qs: QuoteSession):
+        logger.debug("Set to cache " + str(qs_id) + str(qs))
+        _llm_cache[qs_id] = qs
+
+    async def publish(self, params: LLMParametersSchema):
+        cached = self._get_cached_analyze(params.qs_id)
+        if cached is not None:
+            return await self.qs_repository.update_qs(cached)
+
         connection = await connect("amqp://guest:guest@localhost/")
         async with connection:
-            logger.debug("Connected publish")
             channel = await connection.channel()
             exchange = await channel.declare_exchange(
                 self.exchange_out_name, ExchangeType.DIRECT,
             )
-            logger.debug("Declared publish")
 
             message = Message(
-                text.encode(),
+                params.model_dump_json().encode(),
                 delivery_mode=DeliveryMode.PERSISTENT,
             )
-            logger.debug("Formed message publish")
 
             await exchange.publish(message, routing_key="in")
             logger.debug(f"Sent {message!r}")

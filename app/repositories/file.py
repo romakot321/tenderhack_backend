@@ -7,8 +7,8 @@ import requests
 import cgi
 from urllib.parse import unquote
 
-class FileHandler:
 
+class FileRepository:
     def __is_task_desciption_document(self, filename):
         KEYWORDS = [
             'тз',
@@ -110,8 +110,9 @@ class FileHandler:
             with open(output_path, 'wb') as file:
                 file.write(response.content)
             return output_path, is_TZ
-        except:
+        except Exception as e:
             print("Error: unable to download file via file_id", file_id)
+            print(e)
             return None
 
 
@@ -127,14 +128,13 @@ class FileHandler:
             with open(path_is_TZ, 'w') as file_is_TZ:
                 file_is_TZ.write("")
 
-    def handle_file(self, file_id):
+    def handle_file(self, file_id: int) -> File:
+        file_id = str(file_id)
         path_text_file = "./assets/text_file"+file_id+".txt"
         if os.path.exists(path_text_file):
-            is_TZ = os.path.exists("./assets/bool_tz"+file_id)
-            text = open(path_text_file, 'r').read()
             result = File(
-                text=text,
-                is_TZ=is_TZ,
+                path=path_text_file,
+                is_TZ=os.path.exists("./assets/bool_tz"+file_id),
             )
             return result
         else:
@@ -143,11 +143,11 @@ class FileHandler:
                 return None
 
             text = self.__file_to_text(path)
-
             self.__save_txt_file(file_id, text, is_TZ)
+            del text
 
             result = File(
-                text=text,
+                path=path_text_file,
                 is_TZ=is_TZ
             )
 

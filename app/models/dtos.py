@@ -1,19 +1,20 @@
 from pydantic import BaseModel
 from typing import List, Optional, Dict
 
-class AuctionUrl(BaseModel):
+
+class AuctionSchema(BaseModel):
     url: str
+    criteria: list[str]
+
 
 class QuoteSession(BaseModel):
+    id: int
     status: bool
     reason: str
     warning: bool
 
-class File(BaseModel):
-    text: str
-    data: List[List[Dict[str, str]]] | None = None
-    is_TZ: bool
 
-class Criteries(BaseModel):
-    criteries: List[str]
+class File(BaseModel):
+    path: str
+    is_TZ: bool
 

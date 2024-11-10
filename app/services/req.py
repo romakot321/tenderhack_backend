@@ -3,8 +3,9 @@ from requests import request
 from http import HTTPMethod
 from fastapi import HTTPException
 from http import HTTPStatus
-class RequestService:
 
+
+class RequestService:
     async def req_to_get_auction(self, url: str) -> Auction:
         resp = request(HTTPMethod.GET, url=url, timeout=3)
         json_data = resp.json()
