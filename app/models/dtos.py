@@ -10,9 +10,10 @@ class Criterion(StrEnum):
     MAX_COST = "max_cost"
     START_COST = "start_cost"
     TASK_DOCUMENT = "task_document"
+
 class AuctionSchema(BaseModel):
     url: str
-    criteria: Optional[List[Criterion]]
+    criteria: list[Criterion]
 
 class QuoteSession(BaseModel):
     id: int
@@ -20,8 +21,8 @@ class QuoteSession(BaseModel):
     reason: str
     warning: bool
 
+
 class File(BaseModel):
-    text: str
-    data: List[List[Dict[str, str]]] | None = None
+    path: str
     is_TZ: bool
 
