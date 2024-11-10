@@ -1,4 +1,6 @@
 from fastapi import Depends, HTTPException
+from app.repositories.qs import QSRepository
+from app.models.dtos import AuctionSchema, QuoteSession, Criterion
 from http import HTTPStatus
 
 from app.repositories.qs import QSRepository
@@ -35,8 +37,39 @@ class AuctionService:
         for file in auction.files:
             qs_files.append(self.file_repository.handle_file(file.id))
         params = LLMParametersSchema(qs_id=auction.id, criteria=auction_schema.criteria, files=qs_files)
-        await self.llm_service.publish(params)
 
+        auction = await self.req_service.req_to_get_auction(url)
+
+        for val in Criterion:
+            match val:
+                case "name": # Проверить имя на соответствие
+                    break
+                case "executor":
+                    if auction.isContractGuaranteeRequired: # Требуется обеспечение исполнения контракта
+                        pass
+                    break
+                case "license":
+                    if len(auction.licenseFiles) > 0 or auction.isLicenseProduction: # Требуется проверить наличие сертификатов/лицензий uploadLicenseDocumentsComment
+                        pass
+                    break
+                case "delivery_schedule":
+                    if len(auction.deliveries) > 0: # Требуется проверить на соответствие даты, место и товары
+                        pass
+                    break
+                case "max_cost":
+                    if auction.contractCost is not None: # Требуется проверить максимальную цену контракта
+                        pass
+                    break
+                case "start_cost":
+                    if auction.startCost is not None: # Должно быть значение "Цена контракта"
+                        pass
+                    break
+                case "task_document": # Проверить auction.deliveries.items на соответствие
+                    break
+
+        id = auction.id
+        qs = await self.qs_repository.create_or_update_qs(id)
+        await self.llm_service.publish(params)
         return qs
 
     async def get_qs(self, id: int) -> QuoteSession:

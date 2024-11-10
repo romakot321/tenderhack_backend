@@ -1,7 +1,6 @@
 from fastapi import APIRouter, Depends, Response, Query
 from app.models.dtos import QuoteSession, AuctionSchema
 from app.services.auction import AuctionService
-from typing import Optional
 
 router = APIRouter(prefix='/api/auction', tags=['Auction'])
 
