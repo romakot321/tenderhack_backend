@@ -38,6 +38,9 @@ class FileRepository:
     def __file_docx_to_txt(self, path: str):
         return textract.process(path).decode('utf-8')
 
+    def __file_xlsx_to_txt(self, path: str):
+        return textract.process(path).decode('utf-8')
+
     def __file_doc_to_txt(self, path: str):
         return textract.process(path).decode('utf-8')
 
@@ -75,7 +78,7 @@ class FileRepository:
             tables = self.__extract_tables_docx(path)
         return tables
 
-    def __file_to_text(self, path: str):
+    def file_to_text(self, path: str):
         text = ""
         if path[-4:] == ".pdf":
             text = self.__file_pdf_to_txt(path)
@@ -83,6 +86,8 @@ class FileRepository:
             text = self.__file_doc_to_txt(path)
         elif path[-5:] == ".docx":
             text = self.__file_docx_to_txt(path)
+        elif path[-5:] == ".xlsx":
+            text = self.__file_xlsx_to_txt(path)
 
         text = self.__optimize_text(text)
         return text
@@ -174,8 +179,6 @@ class FileRepository:
 
             self.__delete_file(path)
             return result
-
-
 
 
 
