@@ -146,13 +146,14 @@ class FileRepository:
             return contents
 
     async def handle_file(self, file_id):
+        file_id = str(file_id)
         path_text_file = "./assets/text_file"+file_id+".txt"
 
         if os.path.exists(path_text_file):
             is_TZ = os.path.exists("./assets/bool_tz"+file_id)
             text = await self.__open_existing_txt_file(path_text_file)
             result = File(
-                text=text,
+                path=path_text_file,
                 is_TZ=is_TZ,
             )
             return result
@@ -167,7 +168,7 @@ class FileRepository:
             await self.__save_txt_file(file_id, text, is_TZ)
 
             result = File(
-                text=text,
+                path=path_text_file,
                 is_TZ=is_TZ
             )
 

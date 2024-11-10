@@ -14,6 +14,8 @@ services:
     restart: always
     networks:
       default:
+    volumes:
+      - ./assets:/home/python/assets
 
   llm:
     build:
@@ -26,13 +28,17 @@ services:
     restart: always
     networks:
       default:
+    volumes:
+      - ./assets:/home/python/assets
 
   rabbitmq:
     image: rabbitmq:3-management
     restart: always
     environment:
       - RABBIT_MQ_ERLANG_COOKIE='secret cookie here'
-    ports:
-      - "5672:5672"
     networks:
       default:
+
+volumes:
+  assets:
+    driver: local

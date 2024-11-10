@@ -5,6 +5,7 @@ from fastapi import Depends
 from loguru import logger
 from aio_pika import DeliveryMode, ExchangeType, Message, connect
 from aio_pika.abc import AbstractIncomingMessage
+import os
 
 from app.repositories.qs import QSRepository
 from app.models.dtos import QuoteSession
@@ -15,6 +16,7 @@ from app.services import _llm_cache
 class LLMService:
     exchange_out_name = "requests"
     exchange_in_name = "responses"
+    rabbit_host = os.getenv("RABBIT_HOST", "localhost")
 
     def __init__(self, qs_repository: QSRepository = Depends()):
         self.qs_repository = qs_repository
@@ -43,7 +45,7 @@ class LLMService:
             await msg.ack()
 
     async def connect(self):
-        connection = await connect("amqp://guest:guest@localhost/")
+        connection = await connect(f"amqp://guest:guest@{self.rabbit_host}/")
         async with connection:
             channel = await connection.channel()
             await channel.set_qos(prefetch_count=1)
@@ -73,7 +75,7 @@ class LLMService:
         if cached is not None:
             return await self.qs_repository.update_qs(cached)
 
-        connection = await connect("amqp://guest:guest@localhost/")
+        connection = await connect(f"amqp://guest:guest@{self.rabbit_host}/")
         async with connection:
             channel = await connection.channel()
             exchange = await channel.declare_exchange(

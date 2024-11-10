@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from loguru import logger
 import json
 
 from rabbit_worker import RabbitWorker
@@ -64,13 +65,13 @@ class LLMController:
         for file in files:
             files_content.append(self.file_handler.read_file(file.path))
         prompt = _prompt + "\nТекст: "
-        prompt += '\n\n'.join(content[0] for content in files_content) + '\n\n'
-        prompt += "Ответ: "
-        # prompt += ''.join([_criteria_name_to_id.get(crit, '') for crit in criteria])
+        prompt += '\n\n'.join(content[0][:512] for content in files_content) + '\n\n'
+        prompt += ''.join([_criteria_name_to_id.get(crit, '') for crit in criteria])
+        prompt += "\n\nОтвет: "
         return prompt
 
     def on_message(self, ch, method, properties, body):
-        print("Received:", body)
+        logger.debug("Received:", body)
         body = Parameters.model_validate_json(body.decode())
         prompt = self.prepare_prompt(body.files, body.criteria)
         llm_result = self.service.generate(prompt)

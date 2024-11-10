@@ -20,9 +20,7 @@ RUN mkdir ./wheels
 COPY --from=PackageBuilder ./*.whl ./wheels/
 RUN pip3 install ./wheels/*.whl --no-warn-script-location
 
-COPY setup.py ./
-COPY ./* .
-RUN pip3 install .
+COPY ./* ./
 
 
 CMD python3 controller.py

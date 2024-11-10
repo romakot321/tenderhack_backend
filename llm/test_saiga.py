@@ -61,6 +61,10 @@ def generate(model, tokenizer, prompt, generation_config):
     output = tokenizer.decode(output_ids, skip_special_tokens=True)
     return output.strip()
 
+
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
+print("Using", device)
+
 config = PeftConfig.from_pretrained(MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(
     config.base_model_name_or_path,
@@ -73,9 +77,10 @@ model = PeftModel.from_pretrained(
     MODEL_NAME,
     torch_dtype=torch.float16
 )
+model = model.to(device)
 model.eval()
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False).to(device)
 generation_config = GenerationConfig.from_pretrained(MODEL_NAME)
 print(generation_config)
 
