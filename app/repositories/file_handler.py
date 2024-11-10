@@ -3,9 +3,11 @@ from app.models.dtos import File
 import textract
 from docx.api import Document
 import mimetypes
-import requests
 import cgi
 from urllib.parse import unquote
+import asyncio
+import aiohttp
+import aiofiles
 
 class FileHandler:
 
@@ -85,66 +87,77 @@ class FileHandler:
         text = self.__optimize_text(text)
         return text
 
-    def __download_file(self, file_id):
+    async def __fetch(self, url):
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                data = await response.read()
+                headers = response.headers
+                return (data, headers)
+
+    async def __write_response_to_file(self, path, data):
+        aiofiles_handle = await aiofiles.open(path, 'wb')
+        await aiofiles_handle.write(data)
+
+    async def __download_file(self, file_id):
         url = "https://zakupki.mos.ru/newapi/api/FileStorage/Download?id=" + file_id
-        try:
-            query = requests.get(url)
-            content_type = query.headers['Content-Type']
+        data, headers = await self.__fetch(url)
 
-            content_disposition = query.headers['Content-Disposition']
-            _, content_disposition_params = cgi.parse_header(content_disposition)
+        is_TZ = False
+        content_type = headers['Content-Type']
+        content_disposition = headers['Content-Disposition']
+        _, content_disposition_params = cgi.parse_header(content_disposition)
+        if 'filename*' in content_disposition_params.keys():
+            filename = content_disposition_params['filename*']
+            filename = unquote(filename)
+        else:
+            filename = content_disposition_params['filename']
+        is_TZ = self.__is_task_desciption_document(filename)
+        file_extension = mimetypes.guess_extension(content_type.split(';')[0])
+        output_path = "./assets/session_file" + file_id + file_extension
 
-            if 'filename*' in content_disposition_params.keys():
-                filename = content_disposition_params['filename*']
-                filename = unquote(filename)
-            else:
-                filename = content_disposition_params['filename']
-            print(filename)
+        await self.__write_response_to_file(output_path, data)
 
-            is_TZ = self.__is_task_desciption_document(filename)
+        return output_path, is_TZ
 
-            file_extension = mimetypes.guess_extension(content_type.split(';')[0])
-            output_path = "./assets/session_file"+file_id+file_extension
-
-            response = requests.get(url)
-            with open(output_path, 'wb') as file:
-                file.write(response.content)
-            return output_path, is_TZ
-        except:
-            print("Error: unable to download file via file_id", file_id)
-            return None
 
 
     def __delete_file(self, path):
         os.remove(path)
 
-    def __save_txt_file(self, file_id, text, is_TZ):
-        path = "./assets/text_file"+file_id+".txt"
-        with open(path, 'w') as file:
-            file.write(text)
+    async def __save_txt_file(self, file_id, text, is_TZ):
+        path = "./assets/text_file" + file_id + ".txt"
+        aiofiles_handle_text = await aiofiles.open(path, 'w')
+        await aiofiles_handle_text.write(text)
         if is_TZ:
             path_is_TZ = "./assets/bool_tz"+file_id
-            with open(path_is_TZ, 'w') as file_is_TZ:
-                file_is_TZ.write("")
+            aiofiles_handle_bool = await aiofiles.open(path_is_TZ, 'w')
+            await aiofiles_handle_bool.write('')
 
-    def handle_file(self, file_id):
+    async def __open_existing_txt_file(self, path):
+        async with aiofiles.open(path, mode='r') as file:
+            contents = await file.read()
+            return contents
+
+    async def handle_file(self, file_id):
         path_text_file = "./assets/text_file"+file_id+".txt"
+
         if os.path.exists(path_text_file):
             is_TZ = os.path.exists("./assets/bool_tz"+file_id)
-            text = open(path_text_file, 'r').read()
+            text = await self.__open_existing_txt_file(path_text_file)
             result = File(
                 text=text,
                 is_TZ=is_TZ,
             )
             return result
         else:
-            path, is_TZ = self.__download_file(file_id)
-            if path is None:
+            download_result = await self.__download_file(file_id)
+            if download_result is None:
                 return None
+            path, is_TZ = download_result
 
             text = self.__file_to_text(path)
 
-            self.__save_txt_file(file_id, text, is_TZ)
+            await self.__save_txt_file(file_id, text, is_TZ)
 
             result = File(
                 text=text,
@@ -153,6 +166,9 @@ class FileHandler:
 
             self.__delete_file(path)
             return result
+
+
+
 
 
 
